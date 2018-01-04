@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-import AutoSlider from '../components/AutoSlider';
+import Swipeable from '../components/Swipeable';
 
 class Projects extends Component {
   render() {
-    const { classes } = this.props;
     return (
-      <div className="contentProject">
-        <h2>Projects</h2>
-          <AutoSlider />
+      <div>
+          <Swipeable />
       </div>
     );
   }

@@ -13,6 +13,8 @@ const styles = {
   },
   flex: {
     flex: 1,
+    justifyContent: 'center',
+    alignText: 'center'
   },
   menuButton: {
     marginLeft: -12,
@@ -20,7 +22,7 @@ const styles = {
   },
 };
 
-function ButtonAppBar(props) {
+function FooterBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
@@ -29,19 +31,15 @@ function ButtonAppBar(props) {
           <Typography type="title" color="inherit" className={classes.flex} component="h3">
             Olympikesoft
           </Typography>
-          <Button color="contrast" component={Link} to='/'><Typography color="inherit" component="p">Home</Typography></Button>
-          <Button color="contrast" component={Link} to='/services'><Typography color="inherit" component="p">Services</Typography></Button>
-          <Button color="contrast" component={Link} to='/projects'><Typography color="inherit" component="p">Projects</Typography></Button>
-          <Button color="contrast" component={Link} to='/technologies'><Typography color="inherit" component="p">Technologies</Typography></Button>
-          <Button color="contrast" component={Link} to='/contact'><Typography color="inherit" component="p">Contact</Typography></Button>
+          <Button color="contrast" component={Link} to='/'><Typography color="inherit" component="p">Up</Typography></Button>
         </Toolbar>
       </AppBar>
     </div>
   );
 }
 
-ButtonAppBar.propTypes = {
+FooterBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ButtonAppBar);
+export default withStyles(styles)(FooterBar);

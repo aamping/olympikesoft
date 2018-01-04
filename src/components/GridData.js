@@ -31,7 +31,7 @@ function GridData(props) {
     <div className={classes.root}>
       <GridList cellHeight={280} className={classes.gridList}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <Subheader component="div">December</Subheader>
+          <Subheader component="div"></Subheader>
         </GridListTile>
         {tileData.map(tile => (
           <GridListTile key={tile.img}>

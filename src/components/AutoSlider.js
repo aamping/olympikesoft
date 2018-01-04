@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Slider from 'react-slick';
 import MediaCard from './MediaCard';
 import arrayData from '../data/projects.json';
+import Grid from 'material-ui/Grid';
 
 class AutoSlider extends Component {
   render() {
@@ -12,20 +13,17 @@ class AutoSlider extends Component {
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2000,
-      centerMode: true,
-      overflow: 'hidden'
+      centerMode: true
     };
     return (
-      <div>
         <Slider {...settings}>
-          <div><MediaCard data={arrayData[0]} /></div>
-          <div><MediaCard data={arrayData[0]} /></div>
+          <div><h3>1</h3></div>
+          <div><h3>2</h3></div>
           <div><h3>3</h3></div>
           <div><h3>4</h3></div>
           <div><h3>5</h3></div>
           <div><h3>6</h3></div>
         </Slider>
-      </div>
     );
   }
 }

@@ -5,7 +5,6 @@ class Technologies extends Component {
   render() {
     return (
       <div>
-        <h2>Technologies</h2>
         <GridData />
       </div>
     );
