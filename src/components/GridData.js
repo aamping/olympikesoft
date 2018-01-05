@@ -14,6 +14,7 @@ const styles = theme => ({
     justifyContent: 'space-around',
     overflow: 'hidden',
     background: theme.palette.background.paper,
+    backgroundColor: '#BBDEFB'
   },
   gridList: {
     width: 800,

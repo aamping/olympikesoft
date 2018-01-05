@@ -1,38 +1,27 @@
 import React, { Component } from 'react';
 import { AutoRotatingCarousel, Slide } from 'material-auto-rotating-carousel'
-import { green400, green600, blue400, blue600, red400, red600 } from 'material-ui/colors'
+import slideData from '../data/slideData.json';
 
 class Swipeable extends Component {
 
   render() {
     return (
-      <div style={{ position: 'relative', width: '100%', height: 500 }}>
+      <div style={{ position: 'static', width: '100%', height: 500 }}>
         <AutoRotatingCarousel
           label='Get started'
           open={true}
-          style={{ position: 'absolute' }}
+          style={{ position: 'static', backgroundColor: '#E3F2FD' }}
         >
+          {slideData.map(slide => (
           <Slide
-            media={<img alt={''} src='http://www.icons101.com/icon_png/size_256/id_79394/youtube.png' />}
-            mediaBackgroundStyle={{backgroundColor: red400}}
-            contentStyle={{backgroundColor: red600}}
-            title='This is a very cool feature'
-            subtitle='Just using this will blow your mind.'
+            media={<img alt={''} src={slide.media} />}
+            mediaBackgroundStyle={{backgroundColor: slide.mediaColor}}
+            contentStyle={{backgroundColor: slide.backContentColor}}
+            title={slide.title}
+            subtitle={slide.subtitle}
+            textStyle={{ color: slide.textColor }}
           />
-          <Slide
-            media={<img alt={''} src='http://www.icons101.com/icon_png/size_256/id_80975/GoogleInbox.png' />}
-            mediaBackgroundStyle={{backgroundColor: blue400}}
-            contentStyle={{backgroundColor: blue600}}
-            title='Ever wanted to be popular?'
-            subtitle='Well just mix two colors and your are good to go!'
-          />
-          <Slide
-            media={<img alt={''} src='http://www.icons101.com/icon_png/size_256/id_76704/Google_Settings.png' />}
-            mediaBackgroundStyle={{backgroundColor: green400}}
-            contentStyle={{backgroundColor: green600}}
-            title='May the force be with you'
-            subtitle='The Force is a metaphysical and ubiquitous power in the Star Wars fictional universe.'
-          />
+          ))}
         </AutoRotatingCarousel>
         </div>
     )

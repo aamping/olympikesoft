@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Button from 'material-ui/Button';
+import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
 
 const styles = {
@@ -16,40 +17,42 @@ const styles = {
 
 function MediaCard(props) {
   const { classes, data } = props;
-  // const data = {
-  //   title: 'Green Reptile',
-  //   image: 'https://material-ui-next.com/static/images/cards/contemplative-reptile.jpg',
-  //   headline: 'Lizard',
-  //   content: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
-  //   website: 'www.google.com',
-  //   moreinfo: 'www.google.com'
-  // }
   return (
-    <div>
-      <Card className={classes.card}>
-        <CardMedia
-          className={classes.media}
-          image={data.image}
-          title={data.title}
-        />
-        <CardContent>
-          <Typography type="headline" component="h2">
-            {data.headline}
-          </Typography>
-          <Typography component="p">
-            {data.content}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button dense href={data.website} color="primary">
-            Share
-          </Button>
-          <Button dense href={data.moreinfo} color="primary">
-            Learn More
-          </Button>
-        </CardActions>
-      </Card>
-    </div>
+    <Grid container
+      style={styles.root}
+      alignItems={'center'}
+      spacing={40}
+      direction={'row'}
+      justify={'center'}
+    >
+    {data.map(value => (
+      <Grid item key={value}>
+        <Card className={classes.card}>
+          <CardMedia
+            className={classes.media}
+            image={value.image}
+            title={value.title}
+          />
+          <CardContent>
+            <Typography type="headline" component="h2">
+              {value.headline}
+            </Typography>
+            <Typography component="p">
+              {value.content}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button dense href={value.website} color="primary">
+              Share
+            </Button>
+            <Button dense href={value.moreinfo} color="primary">
+              Learn More
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
+    ))}
+    </Grid>
   );
 }
 

@@ -16,6 +16,9 @@ const styles = {
     justifyContent: 'center',
     alignText: 'center'
   },
+  colorPrimary: {
+    backgroundColor: '#0D47A1'
+  },
   menuButton: {
     marginLeft: -12,
     marginRight: 20,
@@ -26,7 +29,7 @@ function FooterBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar classes={{ colorPrimary: props.classes.colorPrimary}} position="static">
         <Toolbar>
           <Typography type="title" color="inherit" className={classes.flex} component="h3">
             Olympikesoft

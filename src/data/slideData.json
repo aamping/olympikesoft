@@ -1,0 +1,24 @@
+[{
+    "title": "This is a very cool feature",
+    "subtitle": "Just using this will blow your mind.",
+    "media": "http://www.icons101.com/icon_png/size_256/id_79394/youtube.png",
+    "mediaColor": "white",
+    "backContentColor": "white",
+    "textColor": "black"
+},
+{
+    "title": "Ever wanted to be popular?",
+    "subtitle": "Well just mix two colors and your are good to go!",
+    "media": "http://www.icons101.com/icon_png/size_256/id_80975/GoogleInbox.png",
+    "mediaColor": "white",
+    "backContentColor": "white",
+    "textColor": "black"
+},
+{
+    "title": "May the force be with you",
+    "subtitle": "The Force is a metaphysical and ubiquitous power in the Star Wars fictional universe.",
+    "media": "http://www.icons101.com/icon_png/size_256/id_76704/Google_Settings.png",
+    "mediaColor": "white",
+    "backContentColor": "white",
+    "textColor": "black"
+}]

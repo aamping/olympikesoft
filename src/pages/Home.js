@@ -5,7 +5,9 @@ import homeDescription from '../data/homeDescription.json';
 
 const styles = {
   root: {
-    marginTop: 50
+    paddingTop: 120,
+    paddingBottom: 70,
+    backgroundColor: '#E3F2FD'
   },
   img: {
     height: 200,
@@ -19,20 +21,21 @@ const styles = {
 
 function Home(props) {
   return (
-    <Grid container
-      style={styles.root}
-      alignItems={'center'}
-      direction={'column'}
-      justify={'center'}
-    >
-      <img alt={''} style={styles.img} src={homeDescription.img} />
-      <Typography type="headline" component="h3">
-        {homeDescription.title}
-      </Typography>
-      <Typography style={styles.description} component="p">
-        {homeDescription.description}
-      </Typography>
-    </Grid>
+    <div style={styles.root} id='home'>
+      <Grid container
+        alignItems={'center'}
+        direction={'column'}
+        justify={'center'}
+      >
+        <img alt={''} style={styles.img} src={homeDescription.img} />
+        <Typography type="headline" component="h3">
+          {homeDescription.title}
+        </Typography>
+        <Typography style={styles.description} component="p">
+          {homeDescription.description}
+        </Typography>
+      </Grid>
+    </div>
   );
 }
 

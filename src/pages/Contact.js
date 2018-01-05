@@ -5,36 +5,91 @@ import Typography from 'material-ui/Typography';
 
 const styles = {
   root: {
-    marginTop: 50,
+    flexGrow: 1,
+    paddingTop: 50,
+    paddingBottom: 20,
+    backgroundColor: '#E3F2FD'
+  },
+  grid: {
+    marginTop: 30,
     marginBottom: 50
   },
   description: {
-    marginTop: 15,
-    width: '40%'
+    marginLeft: 15,
+    marginBottom: 20
+  },
+  img: {
+    height: 300,
+    width: 500
+  },
+  social: {
+    listStyle: 'none',
+    flexDirection: 'row'
+  },
+  facebook: {
+    background: 'url(social-icon-fb.png) no-repeat',
+    width: '42px',
+    height: '42px',
+    display: 'block',
+    marginLeft: 20,
+    marginRight: 10
+  },
+  twitter: {
+    background: 'url(social-icon-tw.png) no-repeat',
+    width: '42px',
+    height: '42px',
+    display: 'block',
+    marginRight: 10
+  },
+  google: {
+    background: 'url(social-icon-google.png) no-repeat',
+    width: '42px',
+    height: '42px',
+    display: 'block',
+    marginRight: 10
+  },
+  youtube: {
+    background: 'url(social-icon-youtube.png) no-repeat',
+    width: '42px',
+    height: '42px',
+    display: 'block',
+    marginRight: 10
   }
 }
 
 class Contact extends Component {
   render() {
     return (
-      <Grid container
-        style={styles.root}
-        alignItems={'center'}
-        direction={'column'}
-        justify={'center'}
-      >
-        <Typography type="headline" component="h3"> Got Questions?</Typography>
-        <Typography style={styles.description} component="p">Contact us at these details:
-        </Typography>
-        <Typography style={styles.description} component="p">
-    1 mi
-    BOULDER RUNNING COMPANY - BOULDER
-    2775 PEARL STREET #103 BOULDER, CO 80302 303/786-9255
-    3 mi
-    FLATIRONS RUNNING INC.
-    629 S BROADWAY BOULDER, CO 80305 303-554-7837
-        </Typography>
-      </Grid>
+      <div id='contact'>
+        <Grid container
+          style={styles.root}
+          justify={'center'}
+        >
+          <Typography type="headline" component="h3"> Got Questions?</Typography>
+          <Grid container
+            style={styles.grid}
+            justify={'center'}
+          >
+          <img alt={''} style={styles.img} src={'/map.jpg'} />
+            <Grid item>
+              <Typography style={styles.description}>
+                <p><strong>Centro de Empresas e Inova&ccedil;&atilde;o da Madeira - Sala 2 <br /> Madeira Tecnopolo, 1&ordm; Andar <br /> 9020-105 Funchal - Madeira</strong></p>
+                <p>Feel free to send us an email, phone us or visit our headquarters.</p>
+                <p><img src="http://www.dobsware.com/images/location1.png" alt="email" /> <strong><a href="mailto:email@gmail.com?Subject=Hello%20again">Dobsware@gmail.com</a></strong></p>
+                <p><img src="http://www.dobsware.com/images/phone.png" alt="mobile" /> <strong>(+351) 32432432</strong></p>
+                <p><img src="http://www.dobsware.com/images/phone2.png" alt="mobile" /> <strong>(+351) 32434343</strong></p>
+              </Typography>
+              <Grid container direction={'row'} >
+                <a href="https://www.facebook.com/"><span style={styles.facebook}></span></a>
+                <a href="https://twitter.com/"><span style={styles.twitter}></span></a>
+                <a href="https://google.com"><span style={styles.google}></span></a>
+                <a href="https://www.youtube.com/"><span style={styles.youtube}></span></a>
+              </Grid>
+            </Grid>
+
+          </Grid>
+        </Grid>
+      </div>
     );
   }
 }
