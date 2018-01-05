@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AutoRotatingCarousel, Slide } from 'material-auto-rotating-carousel'
+import { AutoRotatingCarousel, Slide } from 'material-auto-rotating-carousel';
 import slideData from '../data/slideData.json';
 
 class Swipeable extends Component {
