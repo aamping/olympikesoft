@@ -13,7 +13,7 @@ import Projects from './pages/Projects';
 import Technologies from './pages/Technologies';
 import Contact from './pages/Contact';
 import { blue } from 'material-ui/colors';
-
+//testing colors
 
 const styles = {
   div: {
