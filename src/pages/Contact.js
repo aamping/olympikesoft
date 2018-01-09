@@ -6,9 +6,8 @@ import Typography from 'material-ui/Typography';
 const styles = {
   root: {
     flexGrow: 1,
-    paddingTop: 50,
-    paddingBottom: 20,
-    backgroundColor: '#E3F2FD'
+    paddingTop: 130,
+    paddingBottom: 130
   },
   grid: {
     marginTop: 30,
@@ -57,41 +56,41 @@ const styles = {
   }
 }
 
-class Contact extends Component {
-  render() {
-    return (
-      <div id='contact'>
+function Contact(props) {
+  return (
+    <div style={{ backgroundColor: props.color}} id='contact'>
+      <Grid container
+        style={styles.root}
+        justify={'center'}
+        spacing={0}
+      >
+        <Typography type="headline" component="h3"> Got Questions?</Typography>
         <Grid container
-          style={styles.root}
+          spacing={0}
+          style={styles.grid}
           justify={'center'}
         >
-          <Typography type="headline" component="h3"> Got Questions?</Typography>
-          <Grid container
-            style={styles.grid}
-            justify={'center'}
-          >
-          <img alt={''} style={styles.img} src={'/map.jpg'} />
-            <Grid item>
-              <Typography style={styles.description}>
-                <p><strong>Centro de Empresas e Inova&ccedil;&atilde;o da Madeira - Sala 2 <br /> Madeira Tecnopolo, 1&ordm; Andar <br /> 9020-105 Funchal - Madeira</strong></p>
-                <p>Feel free to send us an email, phone us or visit our headquarters.</p>
-                <p><img src="http://www.dobsware.com/images/location1.png" alt="email" /> <strong><a href="mailto:email@gmail.com?Subject=Hello%20again">Dobsware@gmail.com</a></strong></p>
-                <p><img src="http://www.dobsware.com/images/phone.png" alt="mobile" /> <strong>(+351) 32432432</strong></p>
-                <p><img src="http://www.dobsware.com/images/phone2.png" alt="mobile" /> <strong>(+351) 32434343</strong></p>
-              </Typography>
-              <Grid container direction={'row'} >
-                <a href="https://www.facebook.com/"><span style={styles.facebook}></span></a>
-                <a href="https://twitter.com/"><span style={styles.twitter}></span></a>
-                <a href="https://google.com"><span style={styles.google}></span></a>
-                <a href="https://www.youtube.com/"><span style={styles.youtube}></span></a>
-              </Grid>
+        <img alt={''} style={styles.img} src={'/map.jpg'} />
+          <Grid item>
+            <Typography style={styles.description}>
+              <p><strong>Centro de Empresas e Inovacccedil;&atilde;o da Madeira - Sala 2 <br /> Madeira Tecnopolo, 1&ordm; Andar <br /> 9020-105 Funchal - Madeira</strong></p>
+              <p>Feel free to send us an email, phone us or visit our headquarters.</p>
+              <p><img src="http://www.dobsware.com/images/location1.png" alt="email" /> <strong><a href="mailto:email@gmail.com?Subject=Hello%20again">mail@gmail.com</a></strong></p>
+              <p><img src="http://www.dobsware.com/images/phone.png" alt="mobile" /> <strong>(+351) 32432432</strong></p>
+              <p><img src="http://www.dobsware.com/images/phone2.png" alt="mobile" /> <strong>(+351) 32434343</strong></p>
+            </Typography>
+            <Grid container direction={'row'} >
+              <a href="https://www.facebook.com/"><span style={styles.facebook}></span></a>
+              <a href="https://twitter.com/"><span style={styles.twitter}></span></a>
+              <a href="https://google.com"><span style={styles.google}></span></a>
+              <a href="https://www.youtube.com/"><span style={styles.youtube}></span></a>
             </Grid>
-
           </Grid>
+
         </Grid>
-      </div>
-    );
-  }
+      </Grid>
+    </div>
+  );
 }
 
 export default Contact;

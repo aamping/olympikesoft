@@ -13,8 +13,7 @@ const styles = theme => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
-    background: theme.palette.background.paper,
-    backgroundColor: '#BBDEFB'
+    background: theme.palette.background.paper
   },
   gridList: {
     width: 800,
@@ -29,7 +28,7 @@ function GridData(props) {
   const { classes } = props;
 
   return (
-    <div className={classes.root}>
+    <div style={{backgroundColor: props.color}} className={classes.root}>
       <GridList cellHeight={280} className={classes.gridList}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
           <Subheader component="div"></Subheader>

@@ -2,12 +2,12 @@ import React from 'react';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import homeDescription from '../data/homeDescription.json';
+import { indigo } from 'material-ui/colors';
 
 const styles = {
   root: {
     paddingTop: 120,
-    paddingBottom: 70,
-    backgroundColor: '#E3F2FD'
+    paddingBottom: 70
   },
   img: {
     height: 200,
@@ -21,8 +21,9 @@ const styles = {
 
 function Home(props) {
   return (
-    <div style={styles.root} id='home'>
+    <div style={{...styles.root, backgroundColor: props.color}} id='home'>
       <Grid container
+        spacing={0}
         alignItems={'center'}
         direction={'column'}
         justify={'center'}

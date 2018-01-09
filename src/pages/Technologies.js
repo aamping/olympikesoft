@@ -4,19 +4,17 @@ import GridData from '../components/GridData';
 const styles ={
   root: {
     paddingTop: 80,
-    paddingBottom: 70,
+    paddingBottom: 20,
     backgroundColor: '#BBDEFB'
   }
 }
 
-class Technologies extends Component {
-  render() {
-    return (
-      <div style={styles.root} id='technologies'>
-        <GridData />
-      </div>
-    );
-  }
+function Technologies(props) {
+  return (
+    <div style={{...styles.root, backgroundColor: props.color}} id='technologies'>
+      <GridData color={props.color} />
+    </div>
+  );
 }
 
 export default Technologies;

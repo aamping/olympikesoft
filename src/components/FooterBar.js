@@ -6,35 +6,33 @@ import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
+import { indigo } from 'material-ui/colors';
 
 const styles = {
   root: {
     width: '100%',
   },
-  flex: {
-    flex: 1,
+  title: {
+    display: 'flex',
     justifyContent: 'center',
-    alignText: 'center'
+    flex: 1
   },
-  colorPrimary: {
-    backgroundColor: '#0D47A1'
+  toolbar: {
   },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
-  },
+  button: {
+  }
 };
 
 function FooterBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar classes={{ colorPrimary: props.classes.colorPrimary}} position="static">
-        <Toolbar>
-          <Typography type="title" color="inherit" className={classes.flex} component="h3">
+      <AppBar style={{backgroundColor: props.color, height: 60 }}  position="static">
+        <Toolbar className={classes.toolbar}>
+          <Typography type="title" color="inherit" className={classes.title} component="h3">
             Olympikesoft
           </Typography>
-          <Button color="contrast" component={Link} to='/'><Typography color="inherit" component="p">Up</Typography></Button>
+          <Button color="contrast" className={classes.button} component={Link} to='/'><Typography color="inherit" component="p">Up</Typography></Button>
         </Toolbar>
       </AppBar>
     </div>

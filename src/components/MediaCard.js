@@ -8,7 +8,7 @@ import Typography from 'material-ui/Typography';
 
 const styles = {
   card: {
-    maxWidth: 345,
+    maxWidth: 280,
   },
   media: {
     height: 200,
@@ -19,7 +19,6 @@ function MediaCard(props) {
   const { classes, data } = props;
   return (
     <Grid container
-      style={styles.root}
       alignItems={'center'}
       spacing={40}
       direction={'row'}

@@ -9,14 +9,12 @@ const styles = {
   }
 }
 
-class Projects extends Component {
-  render() {
-    return (
-      <div style={styles.root} id='projects'>
-          <Swipeable />
-      </div>
-    );
-  }
+function Projects(props) {
+  return (
+    <div style={{...styles.root, backgroundColor: props.color}} id='projects'>
+        <Swipeable color={props.color}/>
+    </div>
+  );
 }
 
 export default Projects;
