@@ -26,11 +26,11 @@ class Collect extends Component {
   render() {
     return(
       <div style={styles.div}>
-        <Home color={blue[50]}/>
-        <Services color={blue[100]}/>
-        <Projects color={blue[200]}/>
-        <Technologies color={blue['A100']}/>
-        <Contact color={blue[300]}/>
+        <Home color={'#29B6F6'}/>
+        <Services color={'#26C6DA'}/>
+        <Projects color={'#29B6F6'}/>
+        <Technologies color={'#26C6DA'}/>
+        <Contact color={'#29B6F6'}/>
       </div>
     );
   }
@@ -44,13 +44,13 @@ class App extends Component {
         <Router>
           <ScrollToTop>
             <div>
-              <AppBar color={blue[500]}/>
+              <AppBar color={'#212121'}/>
               <Route exact path='/' component={Collect}/>
               <Route path='/services' component={Services}/>
               <Route path='/projects' component={Projects}/>
               <Route path='/technologies' component={Technologies}/>
               <Route path='/contact' component={Contact}/>
-              <FooterBar color={blue[500]}/>
+              <FooterBar color={'#212121'}/>
             </div>
           </ScrollToTop>
         </Router>

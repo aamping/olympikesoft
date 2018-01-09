@@ -4,8 +4,7 @@ import GridData from '../components/GridData';
 const styles ={
   root: {
     paddingTop: 80,
-    paddingBottom: 20,
-    backgroundColor: '#BBDEFB'
+    paddingBottom: 20
   }
 }
 
