@@ -1,18 +1,17 @@
 import React, { Component } from "react";
-import Swipeable from '../components/Swipeable';
+import Carousel from '../components/Carousel';
 
 const styles = {
   root: {
     paddingTop: 100,
-    paddingBottom: 100,
-    backgroundColor: '#E3F2FD'
+    paddingBottom: 100
   }
 }
 
 function Projects(props) {
   return (
     <div style={{...styles.root, backgroundColor: props.color}} id='projects'>
-        <Swipeable color={props.color}/>
+        <Carousel color={props.color}/>
     </div>
   );
 }

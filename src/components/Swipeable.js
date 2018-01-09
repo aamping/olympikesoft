@@ -1,28 +1,24 @@
-import React, { Component } from 'react';
-import { AutoRotatingCarousel, Slide } from 'material-auto-rotating-carousel';
-import slideData from '../data/slideData.json';
+import React from 'react';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
 
-function Swipeable(props) {
-  return (
-    <div style={{ position: 'static', width: '100%', height: 500 }}>
-      <AutoRotatingCarousel
-        label='Get started'
-        open={true}
-        style={{ position: 'static', backgroundColor: props.color }}
-      >
-        {slideData.map(slide => (
-        <Slide
-          media={<img alt={''} src={slide.media} />}
-          mediaBackgroundStyle={{backgroundColor: slide.mediaColor}}
-          contentStyle={{backgroundColor: slide.backContentColor}}
-          title={slide.title}
-          subtitle={slide.subtitle}
-          textStyle={{ color: slide.textColor }}
-        />
-        ))}
-      </AutoRotatingCarousel>
-      </div>
-  );
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+
+const styles = {
+  img: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '0 auto'
+  }
 }
+
+const Swipeable = (props) => (
+  <AutoPlaySwipeableViews>
+    {props.data.map(value => (
+    <div style={styles.img} ><img alt={''} src={value.img} /></div>
+  ))}
+  </AutoPlaySwipeableViews>
+);
 
 export default Swipeable;

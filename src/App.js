@@ -9,11 +9,12 @@ import AppBar from './components/AppBar';
 import FooterBar from './components/FooterBar'
 import Home from './pages/Home';
 import Services from './pages/Services';
+import Gallery from './pages/Gallery';
+import Portfolio from './pages/Portfolio';
 import Projects from './pages/Projects';
 import Technologies from './pages/Technologies';
 import Contact from './pages/Contact';
 import { blue } from 'material-ui/colors';
-//testing colors
 
 const styles = {
   div: {
@@ -28,6 +29,8 @@ class Collect extends Component {
       <div style={styles.div}>
         <Home color={'#29B6F6'}/>
         <Services color={'#26C6DA'}/>
+        <Gallery color={'#29B6F6'}/>
+        <Portfolio color={'#26C6DA'}/>
         <Projects color={'#29B6F6'}/>
         <Technologies color={'#26C6DA'}/>
         <Contact color={'#29B6F6'}/>
@@ -47,6 +50,8 @@ class App extends Component {
               <AppBar color={'#212121'}/>
               <Route exact path='/' component={Collect}/>
               <Route path='/services' component={Services}/>
+              <Route path='/gallery' component={Gallery}/>
+              <Route path='/portfolio' component={Portfolio}/>
               <Route path='/projects' component={Projects}/>
               <Route path='/technologies' component={Technologies}/>
               <Route path='/contact' component={Contact}/>

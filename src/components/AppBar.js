@@ -65,6 +65,12 @@ class ButtonAppBar extends Component {
             <Link activeClass="active" to='services' spy={true} offset={0} smooth={true} duration={500}><Button color="inherit"><Typography color="inherit" component="p">Services</Typography></Button></Link>
           </ListItem>
           <ListItem button>
+            <Link activeClass="active" to='gallery' spy={true} offset={0} smooth={true} duration={500}><Button color="inherit"><Typography color="inherit" component="p">Gallery</Typography></Button></Link>
+          </ListItem>
+          <ListItem button>
+            <Link activeClass="active" to='portfolio' spy={true} offset={0} smooth={true} duration={500}><Button color="inherit"><Typography color="inherit" component="p">Services</Typography></Button></Link>
+          </ListItem>
+          <ListItem button>
             <Link activeClass="active" to='projects' spy={true} offset={0} smooth={true} duration={500}><Button color="inherit"><Typography color="inherit" component="p">Projects</Typography></Button></Link>
           </ListItem>
           <ListItem button>
@@ -123,6 +129,8 @@ class ButtonAppBar extends Component {
         </Typography>
         <Link activeClass="active" to='home' spy={true} offset={-100} smooth={true} duration={500}><Button color="inherit"><Typography color="inherit" component="p">Home</Typography></Button></Link>
         <Link activeClass="active" to='services' spy={true} offset={-80} smooth={true} duration={500}><Button color="inherit"><Typography color="inherit" component="p">Services</Typography></Button></Link>
+        <Link activeClass="active" to='gallery' spy={true} offset={-80} smooth={true} duration={500}><Button color="inherit"><Typography color="inherit" component="p">Gallery</Typography></Button></Link>
+        <Link activeClass="active" to='portfolio' spy={true} offset={-80} smooth={true} duration={500}><Button color="inherit"><Typography color="inherit" component="p">Portfolio</Typography></Button></Link>
         <Link activeClass="active" to='projects' spy={true} offset={-80} smooth={true} duration={500}><Button color="inherit"><Typography color="inherit" component="p">Projects</Typography></Button></Link>
         <Link activeClass="active" to='technologies' spy={true} offset={-80} smooth={true} duration={500}><Button color="inherit"><Typography color="inherit" component="p">Technologies</Typography></Button></Link>
         <Link activeClass="active" to='contact' spy={true} offset={-80} smooth={true} duration={500}><Button color="inherit"><Typography color="inherit" component="p">Contact</Typography></Button></Link>
