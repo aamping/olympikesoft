@@ -25,7 +25,7 @@ const styles = {
 class Collect extends Component {
   render() {
     return(
-      <div style={styles.div}>
+      <div>
         <Home color={blue[50]}/>
         <Services color={blue[100]}/>
         <Projects color={blue[200]}/>

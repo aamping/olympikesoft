@@ -21,10 +21,6 @@ const styles = {
     height: 300,
     width: 500
   },
-  social: {
-    listStyle: 'none',
-    flexDirection: 'row'
-  },
   facebook: {
     background: 'url(social-icon-fb.png) no-repeat',
     width: '42px',
